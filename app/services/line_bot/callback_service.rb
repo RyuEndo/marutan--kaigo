@@ -26,51 +26,19 @@ module LineBot
       events.each { |event|
         case event
         when Line::Bot::Event::Follow
-          client.reply_message(event['replyToken'], appreciate_following)
-          client.reply_message(event['replyToken'], ask_plastic_surgery_experience)
+          client.reply_message(event['replyToken'], [appreciate_following, ask_plastic_surgery_experience])
         when Line::Bot::Event::Message
           case event.type
           when Line::Bot::Event::MessageType::Text
             case event.message['text']
-            when 'あります'
+            when 'あり'
               client.reply_message(event['replyToken'], [appreciate, ask_unpleasant_parts])
-            when 'ないです'
-              client.reply_message(event['replyToken'], appreciate)
+            when 'なし'
+              client.reply_message(event['replyToken'], [appreciate, ask_unpleasant_parts])
+            when '鼻' || 'まぶた' || '口'
+              client.reply_message(event['replyToken'], [appreciate, ask_highest_priority_of_hospital])
             else
-              message = {
-                type: "text",
-                text: "Select your favorite food category or send me your location!",
-                quickReply: {
-                  items: [
-                    {
-                      type: "action",
-                      imageUrl: "https://example.com/sushi.png",
-                      action: {
-                        type: "message",
-                        label: "Sushi",
-                        text: "Sushi"
-                      }
-                    },
-                    {
-                      type: "action",
-                      imageUrl: "https://example.com/tempura.png",
-                      action: {
-                        type: "message",
-                        label: "Tempura",
-                        text: "Tempura"
-                      }
-                    },
-                    {
-                      type: "action",
-                      action: {
-                        type: "location",
-                        label: "Send location"
-                      }
-                    }
-                  ]
-                }
-              }
-              client.reply_message(event['replyToken'], message)
+              client.reply_message(event['replyToken'], not_implemented)
             end
           end
         end
