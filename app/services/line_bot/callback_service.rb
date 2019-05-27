@@ -35,7 +35,7 @@ module LineBot
               client.reply_message(event['replyToken'], [appreciate, ask_unpleasant_parts])
             when 'なし'
               client.reply_message(event['replyToken'], [appreciate, ask_unpleasant_parts])
-            when '鼻' || 'まぶた' || '口'
+            when '鼻', 'まぶた', '口'
               client.reply_message(event['replyToken'], [appreciate, ask_highest_priority_of_hospital])
             else
               client.reply_message(event['replyToken'], not_implemented)
