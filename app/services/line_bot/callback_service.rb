@@ -20,11 +20,13 @@ module LineBot
     end
 
     def call
-      validate_signature
-
+      body = request.body.read
       events = client.parse_events_from(body)
       events.each { |event|
         case event
+        when Line::Bot::Event::Follow
+          client.reply_message(event['replyToken'], 'follow ありがと')
+          client.reply_message(event['replyToken'], 'follow ありがと2')
         when Line::Bot::Event::Message
           case event.type
           when Line::Bot::Event::MessageType::Text
