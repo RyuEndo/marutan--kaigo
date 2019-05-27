@@ -1,5 +1,5 @@
 class LineBotController < ApplicationController
-  protect_from_forgery expect: :callback
+  protect_from_forgery except: :callback
 
   def callback
     LineBot::CallbackService.call(request)
