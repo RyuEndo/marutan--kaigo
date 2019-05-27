@@ -3,6 +3,7 @@ require 'line/bot'
 module LineBot
   class CallbackService
     include Client
+    include Message
     include Exceptions::LineBot
 
     private_class_method :new
@@ -25,45 +26,52 @@ module LineBot
       events.each { |event|
         case event
         when Line::Bot::Event::Follow
-          client.reply_message(event['replyToken'], 'follow ありがと')
-          client.reply_message(event['replyToken'], 'follow ありがと2')
+          client.reply_message(event['replyToken'], appreciate_following)
+          client.reply_message(event['replyToken'], ask_plastic_surgery_experience)
         when Line::Bot::Event::Message
           case event.type
           when Line::Bot::Event::MessageType::Text
-            message = {
-              type: "text",
-              text: "Select your favorite food category or send me your location!",
-              quickReply: {
-                items: [
-                  {
-                    type: "action",
-                    imageUrl: "https://example.com/sushi.png",
-                    action: {
-                      type: "message",
-                      label: "Sushi",
-                      text: "Sushi"
+            case event.message['text']
+            when 'あります'
+              client.reply_message(event['replyToken'], [appreciate, ask_unpleasant_parts])
+            when 'ないです'
+              client.reply_message(event['replyToken'], appreciate)
+            else
+              message = {
+                type: "text",
+                text: "Select your favorite food category or send me your location!",
+                quickReply: {
+                  items: [
+                    {
+                      type: "action",
+                      imageUrl: "https://example.com/sushi.png",
+                      action: {
+                        type: "message",
+                        label: "Sushi",
+                        text: "Sushi"
+                      }
+                    },
+                    {
+                      type: "action",
+                      imageUrl: "https://example.com/tempura.png",
+                      action: {
+                        type: "message",
+                        label: "Tempura",
+                        text: "Tempura"
+                      }
+                    },
+                    {
+                      type: "action",
+                      action: {
+                        type: "location",
+                        label: "Send location"
+                      }
                     }
-                  },
-                  {
-                    type: "action",
-                    imageUrl: "https://example.com/tempura.png",
-                    action: {
-                      type: "message",
-                      label: "Tempura",
-                      text: "Tempura"
-                    }
-                  },
-                  {
-                    type: "action",
-                    action: {
-                      type: "location",
-                      label: "Send location"
-                    }
-                  }
-                ]
+                  ]
+                }
               }
-            }
-            client.reply_message(event['replyToken'], message)
+              client.reply_message(event['replyToken'], message)
+            end
           end
         end
       }
