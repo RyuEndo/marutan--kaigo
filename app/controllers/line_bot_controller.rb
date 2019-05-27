@@ -1,6 +1,6 @@
 class LineBotController < ApplicationController
   # disable csrf auth of callback action
-  protect_from_forgery except: %i(:callback)
+  protect_from_forgery :except => [:callback]
   before_action :validate_signature, only: %i(callback)
 
   def callback
