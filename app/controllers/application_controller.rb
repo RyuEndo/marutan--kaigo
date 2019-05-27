@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def handle_403
+  def handle_403(e)
+    logger.error(e)
     head :forbidden
   end
 end
