@@ -10,14 +10,14 @@ module LineBot
     def appreciate_following
       {
         type: 'text',
-        text: '友達登録ありがとうございます'
+        text: '友達登録ありがとう!'
       }
     end
 
     def ask_plastic_surgery_experience
       {
         type: 'text',
-        text: '整形の経験はありますか',
+        text: '整形の経験はありますか?',
         quickReply: {
           items: [
             {
