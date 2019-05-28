@@ -44,14 +44,5 @@ module LineBot
         end
       }
     end
-
-    def validate_signature
-      body = request.body.read
-      signature = request.env['HTTP_X_LINE_SIGNATURE']
-
-      unless client.validate_signature(body, signature)
-        raise InvalidSignature
-      end
-    end
   end
 end
