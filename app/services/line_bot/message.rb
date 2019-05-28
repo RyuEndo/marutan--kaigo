@@ -10,7 +10,7 @@ module LineBot
     def appreciate_following
       {
         type: 'text',
-        text: '友達登録ありがとう!'
+        text: '友達登録ありがとう!よろしく！'
       }
     end
 
