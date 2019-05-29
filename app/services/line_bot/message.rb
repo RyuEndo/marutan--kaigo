@@ -175,8 +175,8 @@ module LineBot
     end
 	def location
       {  
-        "type":"location",
-        "label":"Location"
+        type:"location",
+        label:"Location"
       }
     end
   end
