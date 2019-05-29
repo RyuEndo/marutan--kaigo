@@ -173,5 +173,11 @@ module LineBot
         text: 'まだ対応できません'
       }
     end
+	def location
+      {  
+        "type":"location",
+        "label":"Location"
+      }
+    end
   end
 end
