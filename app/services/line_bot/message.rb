@@ -35,7 +35,7 @@ module LineBot
                 label: 'い',
                 text: 'い'
               }
-            }
+            },
 			{
               type: 'action',
               action: {
@@ -43,7 +43,7 @@ module LineBot
                 label: 'う',
                 text: 'う'
               }
-            }
+            },
 			{
               type: 'action',
               action: {
@@ -51,7 +51,7 @@ module LineBot
                 label: 'え',
                 text: 'え'
               }
-            }
+            },
 			{
               type: 'action',
               action: {
@@ -86,7 +86,7 @@ module LineBot
                 label: 'き',
                 text: 'き'
               }
-            }
+            },
 			{
               type: 'action',
               action: {
@@ -94,7 +94,7 @@ module LineBot
                 label: 'く',
                 text: 'く'
               }
-            }
+            },
 			{
               type: 'action',
               action: {
@@ -102,7 +102,7 @@ module LineBot
                 label: 'け',
                 text: 'け'
               }
-            }
+            },
 			{
               type: 'action',
               action: {
@@ -137,7 +137,7 @@ module LineBot
                 label: 'し',
                 text: 'し'
               }
-            }
+            },
 			{
               type: 'action',
               action: {
@@ -145,7 +145,7 @@ module LineBot
                 label: 'す',
                 text: 'す'
               }
-            }
+            },
 			{
               type: 'action',
               action: {
@@ -153,7 +153,7 @@ module LineBot
                 label: 'せ',
                 text: 'せ'
               }
-            }
+            },
 			{
               type: 'action',
               action: {
