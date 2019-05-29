@@ -173,14 +173,51 @@ module LineBot
         text: 'まだ対応できません'
       }
     end
-	def location
-      {
-        type: 'action',
-        action: {
-          type: 'location',
-          label: 'location'
-        }
-       }
+  def carousel
+    {
+    "type": "template",
+    "altText": "this is a carousel template",
+    "template": {
+        "type": "carousel",
+        "actions": [],
+        "columns": [
+            {
+                "thumbnailImageUrl": "SPECIFY_YOUR_IMAGE_URL",
+                "title": "タイトルです",
+                "text": "テキストです",
+                "actions": [
+                    {
+                        "type": "message",
+                        "label": "アクション 1",
+                        "text": "アクション 1"
+                    },
+                    {
+                        "type": "message",
+                        "label": "アクション 2",
+                        "text": "アクション 2"
+                    }
+                ]
+            },
+            {
+                "thumbnailImageUrl": "SPECIFY_YOUR_IMAGE_URL",
+                "title": "タイトルです",
+                "text": "テキストです",
+                "actions": [
+                    {
+                        "type": "message",
+                        "label": "アクション 1",
+                        "text": "アクション 1"
+                    },
+                    {
+                        "type": "message",
+                        "label": "アクション 2",
+                        "text": "アクション 2"
+                    }
+                ]
+            }
+        ]
+    }
+}
     end
   end
 end

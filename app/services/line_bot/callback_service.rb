@@ -37,8 +37,8 @@ module LineBot
               client.reply_message(event['replyToken'], [appreciate, ask_thirdquestion])
             when 'さ', 'し', 'す', 'せ', 'そ'
               client.reply_message(event['replyToken'], [appreciate, ask_firstquestion])
-			when '位置情報'
-              client.reply_message(event['replyToken'], [appreciate, location])
+			when 'カルーセル'
+              client.reply_message(event['replyToken'], [appreciate, carousel])
             else
               client.reply_message(event['replyToken'], [not_implemented,ask_firstquestion])
             end
