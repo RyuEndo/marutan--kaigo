@@ -31,13 +31,13 @@ module LineBot
           case event.type
           when Line::Bot::Event::MessageType::Text
             case event.message['text']
-            when 'あ', 'い', 'う', 'え', 'お'
+            when 'い', 'う', 'え', 'お'
               client.reply_message(event['replyToken'], [appreciate, ask_secoundquestion])
-            when 'か', 'き', 'く', 'け', 'こ'
+            when 'き', 'く', 'け', 'こ'
               client.reply_message(event['replyToken'], [appreciate, ask_thirdquestion])
-            when 'さ', 'し', 'す', 'せ', 'そ'
+            when 'し', 'す', 'せ', 'そ'
               client.reply_message(event['replyToken'], [appreciate, ask_firstquestion])
-			when 'カルーセル'
+			when 'あ','か','さ'
               client.reply_message(event['replyToken'], [appreciate, carousel])
             else
               client.reply_message(event['replyToken'], [not_implemented,ask_firstquestion])

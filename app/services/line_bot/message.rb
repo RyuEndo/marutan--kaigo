@@ -182,34 +182,50 @@ module LineBot
         "actions": [],
         "columns": [
             {
-                "title": "タイトルです",
-                "text": "テキストです",
+                "title": "タイトル",
+                "text": "テキスト",
                 "actions": [
                     {
                         "type": "message",
-                        "label": "アクション 1",
-                        "text": "アクション 1"
+                        "label": "あ",
+                        "text": "あ"
                     },
                     {
                         "type": "message",
-                        "label": "アクション 2",
-                        "text": "アクション 2"
+                        "label": "い",
+                        "text": "い"
                     }
                 ]
             },
             {
-                "title": "タイトルです",
-                "text": "テキストです",
+                "title": "タイトル２",
+                "text": "テキスト２",
                 "actions": [
                     {
                         "type": "message",
-                        "label": "アクション 1",
-                        "text": "アクション 1"
+                        "label": "か",
+                        "text": "か"
                     },
                     {
                         "type": "message",
-                        "label": "アクション 2",
-                        "text": "アクション 2"
+                        "label": "き",
+                        "text": "き"
+                    }
+                ]
+            },
+			{
+                "title": "タイトル３",
+                "text": "テキスト３",
+                "actions": [
+                    {
+                        "type": "message",
+                        "label": "さ",
+                        "text": "さ"
+                    },
+                    {
+                        "type": "message",
+                        "label": "し",
+                        "text": "し"
                     }
                 ]
             }
