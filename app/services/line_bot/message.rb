@@ -174,10 +174,13 @@ module LineBot
       }
     end
 	def location
-      {  
-        type:"location",
-        label:"Location"
-      }
+      {
+        type: 'action',
+        action: {
+          type: 'location',
+          label: 'location'
+        }
+       }
     end
   end
 end
