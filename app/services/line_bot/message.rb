@@ -173,7 +173,7 @@ module LineBot
         text: 'まだ対応できません'
       }
     end
-  def carousel
+    def carousel
     {
     "type": "template",
     "altText": "this is a carousel template",
@@ -182,7 +182,6 @@ module LineBot
         "actions": [],
         "columns": [
             {
-                "thumbnailImageUrl": "SPECIFY_YOUR_IMAGE_URL",
                 "title": "タイトルです",
                 "text": "テキストです",
                 "actions": [
@@ -199,7 +198,6 @@ module LineBot
                 ]
             },
             {
-                "thumbnailImageUrl": "SPECIFY_YOUR_IMAGE_URL",
                 "title": "タイトルです",
                 "text": "テキストです",
                 "actions": [
