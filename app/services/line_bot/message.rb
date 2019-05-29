@@ -10,30 +10,54 @@ module LineBot
     def appreciate_following
       {
         type: 'text',
-        text: '友達登録ありがとう!よろしく！'
+        text: '友達登録ありがとうございます！ここにサービスの説明を入れます。'
       }
     end
 
-    def ask_plastic_surgery_experience
+    def ask_firstquestion
       {
         type: 'text',
-        text: '整形の経験はありますか?',
+        text: '一つ目の質問です',
         quickReply: {
           items: [
             {
               type: 'action',
               action: {
                 type: 'message',
-                label: 'あり',
-                text: 'あり'
+                label: 'あ',
+                text: 'あ'
               }
             },
             {
               type: 'action',
               action: {
                 type: 'message',
-                label: 'なし',
-                text: 'なし'
+                label: 'い',
+                text: 'い'
+              }
+            }
+			{
+              type: 'action',
+              action: {
+                type: 'message',
+                label: 'う',
+                text: 'う'
+              }
+            }
+			{
+              type: 'action',
+              action: {
+                type: 'message',
+                label: 'え',
+                text: 'え'
+              }
+            }
+			{
+              type: 'action',
+              action: {
+                type: 'message',
+                label: 'お',
+                text: 'お'
               }
             }
           ]
@@ -41,34 +65,50 @@ module LineBot
       }
     end
 
-    def ask_unpleasant_parts
+    def ask_secoundquestion
       {
         type: 'text',
-        text: '特に気になる部位はどちらですか',
+        text: '二つ目の質問です',
         quickReply: {
           items: [
             {
               type: 'action',
               action: {
                 type: 'message',
-                label: '鼻',
-                text: '鼻'
+                label: 'か',
+                text: 'か'
               }
             },
             {
               type: 'action',
               action: {
                 type: 'message',
-                label: 'まぶた',
-                text: 'まぶた'
+                label: 'き',
+                text: 'き'
               }
-            },
-            {
+            }
+			{
               type: 'action',
               action: {
                 type: 'message',
-                label: '口',
-                text: '口'
+                label: 'く',
+                text: 'く'
+              }
+            }
+			{
+              type: 'action',
+              action: {
+                type: 'message',
+                label: 'け',
+                text: 'け'
+              }
+            }
+			{
+              type: 'action',
+              action: {
+                type: 'message',
+                label: 'こ',
+                text: 'こ'
               }
             }
           ]
@@ -76,42 +116,50 @@ module LineBot
       }
     end
 
-    def ask_highest_priority_of_hospital
+    def ask_thirdquestion
       {
         type: 'text',
-        text: '病院を選ぶにあたって最も重要視する点は何ですか',
+        text: '三つ目の質問です',
         quickReply: {
           items: [
             {
               type: 'action',
               action: {
                 type: 'message',
-                label: '値段',
-                text: '値段'
+                label: 'さ',
+                text: 'さ'
               }
             },
             {
               type: 'action',
               action: {
                 type: 'message',
-                label: '症例',
-                text: '症例'
+                label: 'し',
+                text: 'し'
               }
-            },
-            {
+            }
+			{
               type: 'action',
               action: {
                 type: 'message',
-                label: '評判',
-                text: '評判'
+                label: 'す',
+                text: 'す'
               }
-            },
-            {
+            }
+			{
               type: 'action',
               action: {
                 type: 'message',
-                label: 'カウンセラーの質',
-                text: 'カウンセラーの質'
+                label: 'せ',
+                text: 'せ'
+              }
+            }
+			{
+              type: 'action',
+              action: {
+                type: 'message',
+                label: 'そ',
+                text: 'そ'
               }
             }
           ]
@@ -122,7 +170,7 @@ module LineBot
     def not_implemented
       {
         type: 'text',
-        text: '実装してなす'
+        text: 'まだ対応できません'
       }
     end
   end

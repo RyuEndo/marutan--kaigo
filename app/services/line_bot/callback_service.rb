@@ -26,17 +26,17 @@ module LineBot
       events.each { |event|
         case event
         when Line::Bot::Event::Follow
-          client.reply_message(event['replyToken'], [appreciate_following, ask_plastic_surgery_experience])
+          client.reply_message(event['replyToken'], [appreciate_following, ask_firstquestion])
         when Line::Bot::Event::Message
           case event.type
           when Line::Bot::Event::MessageType::Text
             case event.message['text']
-            when 'あり'
-              client.reply_message(event['replyToken'], [appreciate, ask_unpleasant_parts])
-            when 'なし'
-              client.reply_message(event['replyToken'], [appreciate, ask_unpleasant_parts])
-            when '鼻', 'まぶた', '口'
-              client.reply_message(event['replyToken'], [appreciate, ask_highest_priority_of_hospital])
+            when 'あ', 'い', 'う', 'え', 'お'
+              client.reply_message(event['replyToken'], [appreciate, ask_secoundquestion])
+            when 'か', 'き', 'く', 'け', 'こ'
+              client.reply_message(event['replyToken'], [appreciate, ask_thirdquestion])
+            when 'さ', 'し', 'す', 'せ', 'そ'
+              client.reply_message(event['replyToken'], [appreciate, ask_firstquestion])
             else
               client.reply_message(event['replyToken'], not_implemented)
             end
