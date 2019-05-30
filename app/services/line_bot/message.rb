@@ -17,7 +17,7 @@ module LineBot
     def ask_firstquestion
       {
         type: 'text',
-        text: '一つ目の質問です',
+        text: '一つ目の質問です.',
         quickReply: {
           items: [
             {
