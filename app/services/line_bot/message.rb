@@ -453,5 +453,4 @@ module LineBot
       }
     end
   end
-	
 end
