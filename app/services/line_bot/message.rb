@@ -385,11 +385,30 @@ module LineBot
     end
 	  
 	def propose_home
-	  {
-	    type: 'uri',
-	    label: 'サイトを見る',
-	    uri: 'https://irman.site/'
-	  }
+      {
+        type: 'text',
+        text: 'あなたのお探しの条件にぴったりの介護施設を探してきました！一括で資料請求しますか？(もう少し詰める必要がある)',
+        quickReply: {
+          items: [
+            {
+              type: 'action',
+              action: {
+                type: 'message',
+                label: 'する',
+                text: 'する'
+              }
+            },
+            {
+              type: 'action',
+              action: {
+                type: 'message',
+                label: 'しない',
+                text: 'しない'
+              }
+            }
+          ]
+        }
+      }
     end
 	  
     def ask_after
