@@ -283,7 +283,8 @@ module LineBot
                 type: 'message',
                 label: '未定',
                 text: '未定'
-              },
+              }
+			},
 			{
               type: 'action',
               action: {
@@ -291,7 +292,6 @@ module LineBot
                 label: '費用の選択に戻る',
                 text: '費用の選択に戻る'
               }
-            }
             }
           ]
         }
