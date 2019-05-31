@@ -30,9 +30,8 @@ module LineBot
         when Line::Bot::Event::Message
           case event.type
           when Line::Bot::Event::MessageType::Text
-            case event.message['text']
-				
-		　　when '地域の選択に戻る','他の施設を探す'
+            case event.message['text']	
+			when '地域の選択に戻る','他の施設を探す'
 			  client.reply_message(event['replyToken'], [appreciate, ask_area])
             when '北海道', '東北', '関東', '中部', '近畿', '中国', '近畿', '九州','都道府県の選択に戻る'
               client.reply_message(event['replyToken'], [appreciate, ask_second_area])
