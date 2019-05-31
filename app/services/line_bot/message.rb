@@ -387,8 +387,8 @@ module LineBot
 	def propose_home
 	  {
 	    type: 'uri',
-	    label: 'View details',
-	    uri: 'https://vigilant-galileo-e391c6.netlify.com/'
+	    label: 'サイトを見る',
+	    uri: 'https://irman.site/'
 	  }
     end
 	  
