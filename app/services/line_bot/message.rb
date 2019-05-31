@@ -394,30 +394,6 @@ module LineBot
             desktop: "https://vigilant-galileo-e391c6.netlify.com/"
          }
 　　　　}
-      {
-        type: 'text',
-        text: 'あなたのお探しの条件にぴったりの介護施設を探してきました！一括で資料請求しますか？(もう少し詰める必要がある)',
-        quickReply: {
-          items: [
-            {
-              type: 'action',
-              action: {
-                type: 'message',
-                label: 'する',
-                text: 'する'
-              }
-            },
-            {
-              type: 'action',
-              action: {
-                type: 'message',
-                label: 'しない',
-                text: 'しない'
-              }
-            }
-          ]
-        }
-      }
     end
 	  
     def ask_after
