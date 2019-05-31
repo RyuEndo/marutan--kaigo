@@ -386,13 +386,10 @@ module LineBot
 	  
 	def propose_home
 	  {
-	    "type":"uri",
-	    "label":"View details",
-	    "uri":"https://vigilant-galileo-e391c6.netlify.com/",
-		"altUri": {
-		  "desktop" : "https://vigilant-galileo-e391c6.netlify.com/"
-	     }
-		}
+	    type:"uri",
+	    label:"View details",
+	    uri:"https://vigilant-galileo-e391c6.netlify.com/"
+	  }
     end
 	  
     def ask_after
