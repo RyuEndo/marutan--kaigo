@@ -446,74 +446,12 @@ module LineBot
       }
     end
 	  
-	  
-
     def not_implemented
       {
         type: 'text',
         text: 'まだ対応できません'
       }
     end
-	  
-    def carousel
-    {
-    "type": "template",
-    "altText": "this is a carousel template",
-    "template": {
-        "type": "carousel",
-        "actions": [],
-        "columns": [
-            {
-                "title": "タイトル",
-                "text": "テキスト",
-                "actions": [
-                    {
-                        "type": "message",
-                        "label": "あ",
-                        "text": "あ"
-                    },
-                    {
-                        "type": "message",
-                        "label": "い",
-                        "text": "い"
-                    }
-                ]
-            },
-            {
-                "title": "タイトル２",
-                "text": "テキスト２",
-                "actions": [
-                    {
-                        "type": "message",
-                        "label": "か",
-                        "text": "か"
-                    },
-                    {
-                        "type": "message",
-                        "label": "き",
-                        "text": "き"
-                    }
-                ]
-            },
-			{
-                "title": "タイトル３",
-                "text": "テキスト３",
-                "actions": [
-                    {
-                        "type": "message",
-                        "label": "さ",
-                        "text": "さ"
-                    },
-                    {
-                        "type": "message",
-                        "label": "し",
-                        "text": "し"
-                    }
-                ]
-            }
-        ]
-    }
-}
-    end
   end
+	
 end
